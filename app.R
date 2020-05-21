@@ -1,6 +1,6 @@
-require(shiny)
-require(psychTestR)
-require(psychTestRCAT)
+library(shiny)
+library(psychTestR)
+library(psychTestRCAT)
 
 item.bank <- read.csv("ItemBank.csv")
 
