@@ -3,39 +3,11 @@ library(psychTestR)
 library(psychTestRCAT)
 library(htmltools)
 
-item.bank <- read.csv("PDCT_IRT_ItemBank.csv")
-
-# instantiate columns
-item.bank$answer <- NULL
-item.bank$tone.1 <- NULL
-item.bank$tone.2 <- NULL
-item.bank$tone.3 <- NULL
-
-random.tone <- function(row) {
-  
-  # create random position of answer
-  answer <- sample(3,1)
-  
-  row["answer"] <- answer
-  
-  # define position of level tone (1,2 or 3 is the answer)
-  row[paste0("tone.",answer)] <- row["level"]
-  
-  # and the standards
-  standards <- setdiff(c(1,2,3),answer)
-  row[paste0("tone.",standards[1])] <- 330
-  row[paste0("tone.",standards[2])] <- 330
-  
-  return(row)
-  
-}
-
+item.bank <- read.csv("ItemBank.csv")
 
 show.item <- function(item, state, ...) {
   
   item_number <- psychTestRCAT::get_item_number(item)
-  
-  item <- random.tone(item)
   
   tones <- sprintf("playTones([%s, %s, %s]);", item["tone.1"], item["tone.2"], item["tone.3"])
   
@@ -67,7 +39,7 @@ timeline <- psychTestR::join(
         opt = adapt_test_options(next_item.criterion = "bOpt",
                                next_item.estimator = "BM",
                                 final_ability.estimator = "WL",
-                                  eligible_first_items = c(97,98,99)
+                                  eligible_first_items = c(289, 292, 295)
                                )),
         # save results
         elt_save_results_to_disk(complete = TRUE),
