@@ -40,7 +40,7 @@ x$packages[x$packages$package %in% c("PDT", "psychTestR", "psychTestRCAT"), ]
 You can demo the PDT at the R console, as follows:
 
 ``` r
-# Load the JAJ package
+# Load the PDT package
 library(PDT)
 
 # Run a demo
