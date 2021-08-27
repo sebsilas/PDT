@@ -1,3 +1,5 @@
+## code to prepare `PDCT_item_bank` dataset goes here
+
 
 items <- read.csv("PDCT_IRT_ItemBank.csv")
 
@@ -12,11 +14,11 @@ random.item.bank <- do.call("rbind", replicate(3, random.item.bank, simplify = F
 
 
 # create main data frame
-data.out <- data.frame(matrix(vector(),ncol=ncol(random.item.bank)))
-names(data.out) <- names(random.item.bank)
+PDCT_item_bank <- data.frame(matrix(vector(),ncol=ncol(random.item.bank)))
+names(PDCT_item_bank) <- names(random.item.bank)
 
 for (i in 1:nrow(items)) {
-  
+
   rows <- data.frame(random.item.bank[random.item.bank["item.no"]==i, ])
 
   rows[1,"answer"] <- 1
@@ -25,9 +27,11 @@ for (i in 1:nrow(items)) {
   rows[1,"tone.1"] <- random.item.bank[i,"level"]
   rows[2,"tone.2"] <- random.item.bank[i,"level"]
   rows[3,"tone.3"] <- random.item.bank[i,"level"]
-  
-  data.out <- rbind(data.out, rows)
-  
+
+  PDCT_item_bank <- rbind(data.out, rows)
+
 }
 
-write.csv(data.out, "ItemBank.csv", row.names = FALSE)
+# write.csv(PDCT_item_bank, "ItemBank.csv", row.names = FALSE)
+
+usethis::use_data(PDCT_item_bank, overwrite = TRUE)
