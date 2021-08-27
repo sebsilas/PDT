@@ -1,4 +1,4 @@
-#' Load the Pitch Discrimination Task (PDCT)
+#' Load the Pitch Discrimination Task (PDT)
 #'
 #' @param num_items
 #'
@@ -6,7 +6,7 @@
 #' @export
 #'
 #' @examples
-PDCT <- function(num_items = 10L) {
+PDT <- function(num_items = 10L) {
 
   timeline <- psychTestR::new_timeline(psychTestR::join(
 
@@ -17,7 +17,7 @@ PDCT <- function(num_items = 10L) {
                           shiny::tags$p("You must click which tone you think is the odd one out (the highest tone)."))),
     psychTestR::one_button_page(shiny::tags$h4("Let's begin!")),
 
-          psychTestRCAT::adapt_test(label = "PDCT",
+          psychTestRCAT::adapt_test(label = "PDT",
           item_bank = PDCT_item_bank,
           show_item = show_item,
           stopping_rule = psychTestRCAT::stopping_rule.num_items(n = num_items),
@@ -33,9 +33,9 @@ PDCT <- function(num_items = 10L) {
         ), dict = musicassessr::dict(NULL))
 
 
-  PDCT.test <- psychTestR::make_test(elts = timeline)
+  PDT.test <- psychTestR::make_test(elts = timeline)
 
-  shiny::runApp(PDCT.test)
+  shiny::runApp(PDT.test)
 
 }
 
