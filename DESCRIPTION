@@ -15,8 +15,12 @@ RoxygenNote: 7.1.1
 Depends: 
     R (>= 2.10)
 Imports: 
-    psychTestRCAT,
-    psychTestR,
+    psychTestRCAT (>= 1.6.2),
+    psychTestR (>= 2.23.0),
     shiny,
     htmltools,
-    musicassessr
+    musicassessr (>= 0.0.0.9000)
+Remotes:  
+    syntheso/musicassessr,
+    pmcharrison/psychTestR,
+    pmcharrison/psychTestRCAT

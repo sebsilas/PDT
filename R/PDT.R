@@ -47,7 +47,8 @@ show_item <- function(item, state, ...) {
   tones <- sprintf("playTones([%s, %s, %s]);", item["tone.1"], item["tone.2"], item["tone.3"])
 
   page <- psychTestR::NAFC_page(label = paste0("q", item_number),
-                                prompt = shiny::tags$div(musicassessr::musicassessr_js_scripts('A','B','C','D', 'E'),
+                                prompt = shiny::tags$div(
+                                  musicassessr::musicassessr_js_scripts('A','B','C','D', 'E'),
                                               shiny::tags$script(tones),
                                              shiny::tags$p("Click the odd one out.")),
                                 choices = as.character(1:3),
