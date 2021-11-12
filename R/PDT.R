@@ -32,10 +32,11 @@ PDT <- function(num_items = 10L) {
     psychTestR::final_page("You have completed the Pitch Discrimination Task!")
         ), dict = musicassessr::dict(NULL))
 
+}
 
-  PDT.test <- psychTestR::make_test(elts = timeline)
-
-  shiny::runApp(PDT.test)
+PDT_standalone <- function() {
+  timeline <- PDT <- function(num_items = 10L)
+  psychTestR::make_test(elts = timeline)
 
 }
 
