@@ -1,7 +1,7 @@
 ## code to prepare `PDCT_item_bank` dataset goes here
 
 
-items <- read.csv("PDCT_IRT_ItemBank.csv")
+items <- read.csv("data-raw/PDCT_IRT_ItemBank.csv")
 
 # transform data frame to make a possible position for each tone
 
@@ -28,10 +28,12 @@ for (i in 1:nrow(items)) {
   rows[2,"tone.2"] <- random.item.bank[i,"level"]
   rows[3,"tone.3"] <- random.item.bank[i,"level"]
 
-  PDCT_item_bank <- rbind(data.out, rows)
+  PDCT_item_bank <- rbind(PDCT_item_bank, rows)
 
 }
 
 # write.csv(PDCT_item_bank, "ItemBank.csv", row.names = FALSE)
 
 usethis::use_data(PDCT_item_bank, overwrite = TRUE)
+usethis::use_data(PDCT_item_bank, internal = TRUE, overwrite = TRUE)
+

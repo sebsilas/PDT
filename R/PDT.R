@@ -1,12 +1,14 @@
-#' Load the Pitch Discrimination Task (PDT)
+
+#' Launch the Pitch Discrimination Task (PDT)
 #'
 #' @param num_items
+#' @param with_final_page
 #'
 #' @return
 #' @export
 #'
 #' @examples
-PDT <- function(num_items = 10L) {
+PDT <- function(num_items = 10L, with_final_page = TRUE) {
 
   timeline <- psychTestR::new_timeline(psychTestR::join(
 
@@ -29,7 +31,8 @@ PDT <- function(num_items = 10L) {
           # save results
     psychTestR::elt_save_results_to_disk(complete = FALSE),
           # final page if standalone
-    psychTestR::final_page("You have completed the Pitch Discrimination Task!")
+
+    musicassessr::final_page_or_continue_to_new_text(final = with_final_page, task_name = "Pitch Discrimination Task")
         ), dict = musicassessr::dict(NULL))
 
 }

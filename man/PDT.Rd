@@ -2,16 +2,16 @@
 % Please edit documentation in R/PDT.R
 \name{PDT}
 \alias{PDT}
-\title{Load the Pitch Discrimination Task (PDT)}
+\title{Launch the Pitch Discrimination Task (PDT)}
 \usage{
-PDT(num_items = 10L)
+PDT(num_items = 10L, with_final_page = TRUE)
 }
 \arguments{
-\item{num_items}{}
+\item{with_final_page}{}
 }
 \value{
 
 }
 \description{
-Load the Pitch Discrimination Task (PDT)
+Launch the Pitch Discrimination Task (PDT)
 }
