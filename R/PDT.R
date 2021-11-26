@@ -12,7 +12,7 @@ PDT <- function(num_items = 10L, with_final_page = TRUE) {
 
   timeline <- psychTestR::new_timeline(psychTestR::join(
 
-    psychTestR::one_button_page(shiny::tags$div(musicassessr::musicassessr_js_scripts('A','B','C','D', 'E'), shiny::tags$h4("Hello, welcome to the Pitch Discrimination Task!"))),
+    psychTestR::one_button_page(shiny::tags$div(musicassessr::musicassessr_js_scripts(), shiny::tags$h4("Hello, welcome to the Pitch Discrimination Task!"))),
     musicassessr::test_headphones_page(),
     psychTestR::one_button_page(shiny::tags$div(shiny::tags$p("In this task, on each trial you will hear three tones."),
                           shiny::tags$p("One will be higher than the other two."),
