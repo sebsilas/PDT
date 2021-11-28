@@ -4,10 +4,15 @@
 \alias{PDT}
 \title{Launch the Pitch Discrimination Task (PDT)}
 \usage{
-PDT(num_items = 10L, with_final_page = TRUE)
+PDT(
+  num_items = 10L,
+  with_final_page = TRUE,
+  headphones_page = TRUE,
+  import_musicassessr_js_scripts = TRUE
+)
 }
 \arguments{
-\item{with_final_page}{}
+\item{import_musicassessr_js_scripts}{}
 }
 \value{
 
