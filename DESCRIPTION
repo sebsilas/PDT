@@ -16,11 +16,11 @@ Depends:
     R (>= 2.10)
 Imports: 
     psychTestRCAT (>= 1.6.2),
-    psychTestR (>= 2.23.0),
+    psychTestR (>= 2.23.2),
     shiny,
     htmltools,
     musicassessr (>= 0.0.0.9000)
-Remotes:  
+Remotes: 
     syntheso/musicassessr,
     pmcharrison/psychTestR,
     pmcharrison/psychTestRCAT

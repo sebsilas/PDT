@@ -31,7 +31,7 @@ x$packages[x$packages$package %in% c("PDT", "psychTestR", "psychTestRCAT"), ]
 
 4. Install the PDT:
 
-`devtools::install_github('syntheso/PDT')`
+`devtools::install_github('sebsilas/PDT')`
 
 ## Usage
 
