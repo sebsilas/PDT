@@ -44,6 +44,18 @@ PDT <- function(num_items = 10L, with_final_page = TRUE,
 
 }
 
+
+#' Launch PDT as a standalone test
+#'
+#' @param title
+#' @param admin_password
+#' @param researcher_email
+#' @param num_items
+#'
+#' @return
+#' @export
+#'
+#' @examples
 PDT_standalone <- function(title = "Pitch Discrimination Task",
                            admin_password = 'demo',
                            researcher_email = 'sebsilas@gmail.com',
