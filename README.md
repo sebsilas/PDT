@@ -44,7 +44,10 @@ You can demo the PDT at the R console, as follows:
 library(PDT)
 
 # Run a demo
-# and not saving your data
+PDT_standalone()
+
+# Include in timeline
+
 PDT()
 
 ```
