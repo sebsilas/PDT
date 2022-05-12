@@ -21,6 +21,6 @@ Imports:
     htmltools,
     musicassessr (>= 0.0.0.9000)
 Remotes: 
-    syntheso/musicassessr,
-    pmcharrison/psychTestR,
+    sebsilas/musicassessr,
+    sebsilas/psychTestR,
     pmcharrison/psychTestRCAT
