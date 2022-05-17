@@ -67,8 +67,8 @@ PDT_standalone <- function(title = "Pitch Discrimination Task",
                         opt = psychTestR::test_options(
                           title = title,
                           admin_password = admin_password,
-                          additional_scripts = musicassessr::musicassessr_js(visual_notation = FALSE, midi_file_playback = FALSE))
-                        )
+                          additional_scripts = musicassessr::musicassessr_js()
+                        ))
 
 }
 
