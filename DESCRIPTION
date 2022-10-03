@@ -5,7 +5,7 @@ Authors@R:
     person(given = "Sebastian",
            family = "Silas",
            role = c("aut", "cre"),
-           email = "silass@stud.hmtm-ha")
+           email = "silass@stud.hmtm-hannover.de")
 Description: For collecting data on a pitch discrimination task via psychTestR.
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -15,12 +15,12 @@ RoxygenNote: 7.1.1
 Depends: 
     R (>= 2.10)
 Imports: 
-    psychTestRCAT (>= 1.6.2),
     psychTestR (>= 2.23.2),
     shiny,
     htmltools,
-    musicassessr (>= 0.0.0.9000)
-Remotes: 
+    musicassessr (>= 0.0.0.9000),
+    psychTestRCATME (>= 1.6.2)
+Remotes:  
     sebsilas/musicassessr,
     sebsilas/psychTestR,
-    pmcharrison/psychTestRCAT
+    sebsilas/psychTestRCATME
