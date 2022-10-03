@@ -13,7 +13,8 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Depends: 
-    R (>= 2.10)
+    R (>= 2.10),
+    musicassessr (>= 0.0.0.9000)
 Imports: 
     psychTestR (>= 2.23.2),
     shiny,
