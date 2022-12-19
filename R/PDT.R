@@ -20,7 +20,7 @@ PDT <- function(label = "PDT",
                 headphones_page = TRUE,
                 demo = FALSE) {
 
-  timeline <- psychTestR::new_timeline(psychTestR::join(
+  timeline <- psychTestR::join(
 
     psychTestR::one_button_page(shiny::tags$div(
                                 shiny::tags$h4("Hello, welcome to the Pitch Discrimination Task!"))),
@@ -47,7 +47,7 @@ PDT <- function(label = "PDT",
           # final page if standalone
 
     musicassessr::final_page_or_continue_to_new_test(final = with_final_page, task_name = "Pitch Discrimination Task")
-        ), dict = musicassessr::dict(NULL))
+        )
 
 }
 
