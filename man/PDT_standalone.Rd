@@ -8,11 +8,12 @@ PDT_standalone(
   title = "Pitch Discrimination Task",
   admin_password = "demo",
   researcher_email = "sebsilas@gmail.com",
-  num_items = 10L
+  num_items = 10L,
+  demo = FALSE
 )
 }
 \arguments{
-\item{num_items}{}
+\item{demo}{}
 }
 \value{
 

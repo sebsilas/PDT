@@ -3,6 +3,7 @@
 
 #' Launch the Pitch Discrimination Task (PDT)
 #'
+#' @param label
 #' @param num_items
 #' @param with_final_page
 #' @param headphones_page
@@ -12,7 +13,8 @@
 #' @export
 #'
 #' @examples
-PDT <- function(num_items = 10L,
+PDT <- function(label = "PDT",
+                num_items = 10L,
                 with_final_page = TRUE,
                 headphones_page = TRUE,
                 demo = FALSE) {
@@ -45,6 +47,9 @@ PDT <- function(num_items = 10L,
 
     musicassessr::final_page_or_continue_to_new_test(final = with_final_page, task_name = "Pitch Discrimination Task")
         ), dict = musicassessr::dict(NULL))
+
+
+  psychTestR::module(label, timeline)
 
 }
 
