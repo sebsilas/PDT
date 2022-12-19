@@ -5,6 +5,7 @@
 \title{Launch PDT as a standalone test}
 \usage{
 PDT_standalone(
+  label = "PDT",
   title = "Pitch Discrimination Task",
   admin_password = "demo",
   researcher_email = "sebsilas@gmail.com",

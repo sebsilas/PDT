@@ -1,6 +1,7 @@
 
 
 
+
 #' Launch the Pitch Discrimination Task (PDT)
 #'
 #' @param label
@@ -31,7 +32,7 @@ PDT <- function(label = "PDT",
                           shiny::tags$p("You must click which tone you think is the odd one out (the highest tone)."))),
     psychTestR::one_button_page(shiny::tags$h4("Let's begin!")),
 
-          psychTestRCATME::adapt_test(label = "PDT",
+          psychTestRCATME::adapt_test(label =  label,
           item_bank = PDCT_item_bank,
           show_item = show_item,
           stopping_rule = psychTestRCATME::stopping_rule.num_items(n = num_items),
@@ -48,14 +49,12 @@ PDT <- function(label = "PDT",
     musicassessr::final_page_or_continue_to_new_test(final = with_final_page, task_name = "Pitch Discrimination Task")
         ), dict = musicassessr::dict(NULL))
 
-
-  psychTestR::module(label, timeline)
-
 }
 
 
 #' Launch PDT as a standalone test
 #'
+#' @param label
 #' @param title
 #' @param admin_password
 #' @param researcher_email
@@ -66,13 +65,14 @@ PDT <- function(label = "PDT",
 #' @export
 #'
 #' @examples
-PDT_standalone <- function(title = "Pitch Discrimination Task",
+PDT_standalone <- function(label = "PDT",
+                           title = "Pitch Discrimination Task",
                            admin_password = 'demo',
                            researcher_email = 'sebsilas@gmail.com',
                            num_items = 10L,
                            demo = FALSE) {
 
-  timeline <- PDT(num_items = num_items, demo = demo)
+  timeline <- PDT(label = label, num_items = num_items, demo = demo)
 
   psychTestR::make_test(elts = timeline,
                         opt = psychTestR::test_options(
