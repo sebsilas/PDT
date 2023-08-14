@@ -5,8 +5,9 @@ Authors@R:
     person(given = "Sebastian",
            family = "Silas",
            role = c("aut", "cre"),
-           email = "silass@stud.hmtm-hannover.de")
-Description: For collecting data on a pitch discrimination task via psychTestR.
+           email = "sebsilas@gmail.com",
+	   comment = c(ORCID = "0000-0001-8140-6528"))
+Description: An adaptive pitch discrimination test deployed via psychTestR.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -23,5 +24,5 @@ Imports:
     psychTestRCATME (>= 1.6.2)
 Remotes:  
     sebsilas/musicassessr,
-    sebsilas/psychTestR,
+    pmcharrison/psychTestR,
     sebsilas/psychTestRCATME
