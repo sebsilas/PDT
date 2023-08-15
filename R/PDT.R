@@ -72,7 +72,9 @@ PDT_standalone <- function(label = "PDT",
                            num_items = 10L,
                            demo = FALSE) {
 
-  timeline <- PDT(label = label, num_items = num_items, demo = demo)
+  timeline <- psychTestR::new_timeline(
+    PDT(label = label, num_items = num_items, demo = demo),
+    dict = musicassessr::dict(NULL)) # Needs the musicassessr dict
 
   psychTestR::make_test(elts = timeline,
                         opt = psychTestR::test_options(
